@@ -1,0 +1,418 @@
+{
+  "contractName": "Test",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "sayHello",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060a88061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef5fb05b146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600080620be293905080915050905600a165627a7a723058208d9621a4ae0acf9961883ee3815e4cb4bb113ff9f4230cb2fcb99f23f450ad810029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef5fb05b146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600080620be293905080915050905600a165627a7a723058208d9621a4ae0acf9961883ee3815e4cb4bb113ff9f4230cb2fcb99f23f450ad810029",
+  "sourceMap": "27:144:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:144:2;;;;;;;",
+  "deployedSourceMap": "27:144:2:-;;;;;;;;;;;;;;;;;;;;;;;;48:120;;8:9:-1;5:2;;;30:1;27;20:12;5:2;48:120:2;;;;;;;;;;;;;;;;;;;;;;;;90:9;112:12;127:6;112:21;;152:7;144:16;;48:120;;:::o",
+  "source": "pragma solidity ^0.4.0;\r\n\r\ncontract Test {\r\n    function sayHello () public pure returns (uint name) {\r\n        uint message = 778899;\r\n        return (message);\r\n    }\r\n}",
+  "sourcePath": "C:\\xampp\\htdocs\\ethersugar\\solidity\\contracts\\test.sol",
+  "ast": {
+    "absolutePath": "/C/xampp/htdocs/ethersugar/solidity/contracts/test.sol",
+    "exportedSymbols": {
+      "Test": [
+        457
+      ]
+    },
+    "id": 458,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 443,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 457,
+        "linearizedBaseContracts": [
+          457
+        ],
+        "name": "Test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 455,
+              "nodeType": "Block",
+              "src": "101:67:2",
+              "statements": [
+                {
+                  "assignments": [
+                    449
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 449,
+                      "name": "message",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 456,
+                      "src": "112:12:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 448,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "112:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 451,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "373738383939",
+                    "id": 450,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "127:6:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_778899_by_1",
+                      "typeString": "int_const 778899"
+                    },
+                    "value": "778899"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "112:21:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 452,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 449,
+                        "src": "152:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 453,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "151:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 447,
+                  "id": 454,
+                  "nodeType": "Return",
+                  "src": "144:16:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 456,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "sayHello",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 444,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "66:2:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 446,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "90:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 445,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "90:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "89:11:2"
+            },
+            "scope": 457,
+            "src": "48:120:2",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 458,
+        "src": "27:144:2"
+      }
+    ],
+    "src": "0:171:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/xampp/htdocs/ethersugar/solidity/contracts/test.sol",
+    "exportedSymbols": {
+      "Test": [
+        457
+      ]
+    },
+    "id": 458,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 443,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 457,
+        "linearizedBaseContracts": [
+          457
+        ],
+        "name": "Test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 455,
+              "nodeType": "Block",
+              "src": "101:67:2",
+              "statements": [
+                {
+                  "assignments": [
+                    449
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 449,
+                      "name": "message",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 456,
+                      "src": "112:12:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 448,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "112:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 451,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "373738383939",
+                    "id": 450,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "127:6:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_778899_by_1",
+                      "typeString": "int_const 778899"
+                    },
+                    "value": "778899"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "112:21:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 452,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 449,
+                        "src": "152:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 453,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "151:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 447,
+                  "id": 454,
+                  "nodeType": "Return",
+                  "src": "144:16:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 456,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "sayHello",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 444,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "66:2:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 446,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 456,
+                  "src": "90:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 445,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "90:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "89:11:2"
+            },
+            "scope": 457,
+            "src": "48:120:2",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 458,
+        "src": "27:144:2"
+      }
+    ],
+    "src": "0:171:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-08-18T10:54:53.838Z"
+}
