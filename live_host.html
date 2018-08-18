@@ -20,7 +20,7 @@
 <body>
 
 <div class="super_container">
-	
+
 	<!-- Header -->
 
 	<header class="header d-flex flex-row justify-content-end align-items-center">
@@ -68,13 +68,13 @@
 	<!-- Blog Content -->
 
 	<div class="blog_content">
-		
+
 		<div class="container">
 			<div class="row">
-				
+
 				<div class="col-lg-12">
 					<div class="blog_main_content">
-						
+
 						<!-- Featured Post -->
 						<article class="blog_post">
 							<div class="blog_post_image">
@@ -83,7 +83,7 @@
 							<div class="date_box d-flex flex-column align-items-center justify-content-center float-left">
 								<span>
 									<a href="" style="color: #fff">30:60</a>
-								</span>			
+								</span>
 							</div>
 							<div class="date_box d-flex flex-column align-items-center justify-content-center float-right">
 									<span><a href="" style="color: #fff">Stop Live</a></span>
@@ -91,12 +91,12 @@
 						</article>
 						<div class="blog_post_meta">
 							<span class="blog_post_category">100 viewers</span>
-							<span class="blog_post_comments">Review 3.5</span>							
-							<span class="blog_post_comments">Estimated Reward 3.5 ETH</span>							
+							<span class="blog_post_comments">Review 3.5</span>
+							<span class="blog_post_comments">Estimated Reward 3.5 ETH</span>
 						</div>
 						<hr>
 						<h6>My Live Stream URL</h6>
-						<span class="blog_post_comments"><input style="width: 100%" type="text" name="" value="http://ethersugar.com/live_stream.html?contract=0x874587dgdfgy9f8gy987h"></span>
+						<span class="blog_post_comments"><input style="width: 100%" type="text" id="live-stream-url" name="" value=""></span>
 					</div>
 				</div>
 			</div>
@@ -133,6 +133,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/colorbox/jquery.colorbox-min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/blog_custom.js"></script>
+<script type="text/javascript">
+	$('#live-stream-url').val(window.location.href);
+</script>
 </body>
 
 </html>

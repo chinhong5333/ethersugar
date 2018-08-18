@@ -38,12 +38,22 @@ $(document).ready(function(){
 
     let meta_adr = web3.eth.accounts[0];
     let contract = web3.eth.contract(abi);
-    let instance = contract.at(meta_adr);
-    let cData    = contract.new(meta_adr, window.web3.toWei("0.0001", "ether"),window.web3.toWei("0.0001", "ether"), 10, function (err, resp) {
-      console.log(err);
-      console.log(resp);
+    let cData    = contract.new(meta_adr, window.web3.toWei("0.0001", "ether"),window.web3.toWei("0.0001", "ether"), 10, {
+      from : meta_adr,
+      gas  : 1000000,
+      data : bin
+    }, function (err, myContract) {
+      if(!err) {
+       if(!myContract.address) {
+         console.log("tx pending", myContract.transactionHash)
+       } else {
+         console.log("confirmed", myContract.address, myContract)
+         window.location.href = "/ethersugar/live_host.html?contract=" + myContract.address;
+       }
+      }else{
+        console.log("ERR", err);
+      }
     });
-    console.log("instance:", instance);
     console.log("deployed:", cData);
   };
 });

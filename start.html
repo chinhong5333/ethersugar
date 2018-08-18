@@ -81,12 +81,12 @@
 								<div>
 									<input id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="Host Name" required="required" data-error="Host Name is required.">
 									<input id="contact_form_duration" class="input_field contact_form_email" type="text" placeholder="Estimated duration (in minutes)" required="required" data-error="Duration is required.">
-									<input id="contact_form_price" class="input_field contact_form_subject" type="text" placeholder="Viewer Fee (in Ether)" required="required" data-error="Viewer Fee is required.">
+									<input id="contact_form_price" class="input_field contact_form_subject" type="text" placeholder="Viewer Fee (in Ether)" required="required" data-error="Viewer Fee is required." disabled>
 									<input id="contact_form_tag" class="input_field contact_form_subject" type="text" placeholder="Tag" required="required" data-error="Tag is required.">
 									<textarea id="contact_form_message" class="text_field contact_form_message" name="Description"  placeholder="Short Description" rows="4" required data-error="Please, write us a short description."></textarea>
 								</div>
 								<div>
-									<button id="contact_form_host" type= class="contact_submit_btn trans_300" value="Submit">
+									<button id="contact_form_host" class="contact_submit_btn trans_300" value="Submit">
 										host<img src="images/arrow_right.svg" alt="">
 									</button>
 								</div>
@@ -113,11 +113,11 @@
 								</ul>
 							</div>
 						</div>
-						<div>
+						<!-- <div>
 							<button id="login-metamask" type="submit" class="contact_submit_btn trans_300" value="Submit">
 								Login with Metamask<img src="images/arrow_right.svg" alt="">
 							</button>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -156,6 +156,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/easing/easing.js"></script>
 <script src="js/contact_custom.js"></script>
 <script src="js/check_meta_mask.js"></script>
+<script type="text/javascript">
+	$('#contact_form_duration').keyup(calFee);
+
+	function calFee() {
+		let duration = $('#contact_form_duration').val();
+		let view_fee = duration * 0.00016666666;
+		$('#contact_form_price').val(view_fee.toFixed(8));
+	}
+</script>
 </body>
 
 </html>
