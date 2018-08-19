@@ -103,6 +103,14 @@ contract EtherSugar {
         }
     }
 
+    function getHost(address _addr) public constant returns (bool) {
+        if(host == _addr){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     function () public payable {
         require(msg.value >= price);
         require(deposit > 0);
