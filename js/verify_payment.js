@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
      console.log('web3 not found');
    }
 
-   $('#play-video').click(handlePlay);
+   $('.play-video').click(handlePlay);
 
   function handlePlay() {
     console.log("check address", meta_adr);

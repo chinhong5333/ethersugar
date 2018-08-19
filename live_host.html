@@ -80,11 +80,6 @@
 							<div class="blog_post_image">
 								<div class="blog_post_image_background" style="background-image:url(images/blog_1.jpg)"></div>
 							</div>
-							<div class="date_box d-flex flex-column align-items-center justify-content-center float-left" id="play-video">
-								<span>
-									<a href="javascript:void(0)" style="color: #fff">PLAY</a>
-								</span>
-							</div>
 							<div class="date_box d-flex flex-column align-items-center justify-content-center float-left" style="margin-left: 5px;">
 								<span>
 									<a href="javascript:void(0)" style="color: #fff">30:60</a>
@@ -138,9 +133,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/colorbox/jquery.colorbox-min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/blog_custom.js"></script>
-<script src="js/verify_payment.js"></script>
 <script type="text/javascript">
-	$('#live-stream-url').val(window.location.href);
+	let roomid = getUrlVars()['contract'];
+	$('#live-stream-url').val("http://localhost/ethersugar/live_stream.html?contract=" + roomid);
+
+	function getUrlVars() {
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
+		return vars;
+	}
 </script>
 </body>
 
