@@ -8,6 +8,8 @@ console.log("address", meta_adr);
 console.log("instance", instance);
 
 window.addEventListener('load', function() {
+  let bypass_payment = false;
+
    if (typeof web3 !== 'undefined') {
      console.log('web3 is enabled')
      if (web3.currentProvider.isMetaMask === true) {
@@ -32,8 +34,19 @@ window.addEventListener('load', function() {
     console.log("check address", meta_adr);
     instance.getIsPay(meta_adr, function (err, resp) {
       console.log("resp", resp);
-      if(!resp) {
-        alert('Please pay viewer fee with MetaMask');
+      if(!resp && !bypass_payment) {
+        web3.eth.getAccounts(function(error, result) {
+          web3.eth.sendTransaction({
+            data  : bin,
+            gas   : 1000000,
+            value : 10000000000000000
+          }, function(err, transactionHash) {
+            if (!err)
+              console.log(transactionHash);
+            $('#action-label').html('<i class="fa fa-play" aria-hidden="true"></i> WATCH NOW');
+            bypass_payment = true;
+          });
+        });
       }else{
         alert('Enjoy your show !');
       }
