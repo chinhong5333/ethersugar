@@ -15,6 +15,7 @@
 <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/loader.css">
 </head>
 
 <body>
@@ -75,6 +76,12 @@
 
 						<div class="contact_subtitle">Start a live stream</div>
 
+						<div class="alert alert-warning" id="pending-notice" style="display: none; margin-bottom: -40px;">
+							<span class="lds-dual-ring" style="height: 30px;"></span>
+							<label>Your payment is being processing.</label>
+							<label>Please do not click <b>refresh</b> or <b>close</b> this tab.</label>
+						</div>
+
 						<!-- Contact Us Form -->
 						<div class="contact_form_container">
 							<form id="reply_form" action="post">
@@ -82,13 +89,21 @@
 									<input id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="Host Name" required="required" data-error="Host Name is required.">
 									<input id="contact_form_duration" class="input_field contact_form_email" type="text" placeholder="Estimated duration (in minutes)" required="required" data-error="Duration is required.">
 									<input id="contact_form_price" class="input_field contact_form_subject" type="text" placeholder="Viewer Fee (in Ether)" required="required" data-error="Viewer Fee is required." disabled>
-									<input id="contact_form_tag" class="input_field contact_form_subject" type="text" placeholder="Tag" required="required" data-error="Tag is required.">
+									<select id="contact_form_tag" class="input_field contact_form_subject" type="text" placeholder="Tag" required="required" data-error="Tag is required.">
+										<option value="">---Please choose a category---</option>
+										<option value="sports">SPORTS</option>
+										<option value="entertainment">ENTERTAINMENT</option>
+										<option value="guys">GUYS</option>
+										<option value="girls">GIRLS</option>
+										<option value="adult">ADULT</option>
+									</select>
 									<textarea id="contact_form_message" class="text_field contact_form_message" name="Description"  placeholder="Short Description" rows="4" required data-error="Please, write us a short description."></textarea>
 								</div>
 								<div>
-									<button id="contact_form_host" class="contact_submit_btn trans_300" value="Submit">
+									<br>
+									<a href="javascript:void(0);" id="contact_form_host" class="button button-lg contact_submit_btn trans_300" style="padding: 25px;">
 										host<img src="images/arrow_right.svg" alt="">
-									</button>
+									</a>
 								</div>
 
 							</form>

@@ -46,6 +46,11 @@ $(document).ready(function(){
       if(!err) {
        if(!myContract.address) {
          console.log("tx pending", myContract.transactionHash)
+         $('#contact_form_host').hide();
+         $("input").attr("disabled", "1");
+         $("textarea").attr("disabled", "1");
+         $("select").attr("disabled", "1");
+         $('#pending-notice').show();
        } else {
          console.log("confirmed", myContract.address, myContract)
          window.location.href = "/ethersugar/live_host.html?contract=" + myContract.address;
